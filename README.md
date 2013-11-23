@@ -10,8 +10,8 @@ This App's goal is to provides victims and rescue agents with a systematic mobil
 4. Display locations of relief centers and establishments where victims can proceed to attain aid.
 
 The creators of this App are:
-Arnibal, Anna Loren
-Atencio, Jennifer Joy
-Davis, Justin
-Chujani, Sanju
-Vicente, Heinrich
+Anna Loren Arnibal, 
+Jennifer Joy Atencio, 
+Justin Davis, 
+Sanju Chujani, 
+Heinrich Vicente
