@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DARS: Disaster Awareness & Relief System</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+<div class="tab-pane">
+<h2 class="text-center"><img src="images/logo.png" alt="">Disaster Awareness & Relief System</h2></div>
+<!-- <div id="logo" class="container"><img src="images/DARSTEMP.png" alt=""> </div> -->
+
+<div id="bgContent" class="container">
+        <div class="tab-content">
+        <div class="tab-pane fade active in" id="notify">
+          <div id="newsContent">
+            <a class="twitter-timeline"  href="https://twitter.com/dost_pagasa"  data-widget-id="404439709247471616">Tweets by @dost_pagasa</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+        </div>
+
+            <div class="tab-pane fade" id="sHelp">
+              <!-- GEOLOCATION PERSON FINDER -->
+              <p id="location"></p>
+              <p id="details"></p>
+              <button id="startGeo" class="btn btn-danger">Seek Help</button>
+
+                <script src="js/jquery.min.js"></script>
+
+                            <script>
+                    $(document).ready(function() {
+                      $('#startGeo').click(checkLocation);
+                        function checkLocation() {
+                        // will determine geolocation abilities (yes or no)
+                          (navigator.geolocation) ? navigator.geolocation.getCurrentPosition(getLocation, locationFail) : alert('You do not have geolocation available on your device');
+                      } // ends checkLocation()
+                        //this is what happens if getCurrentPosition is successful (getCurrentPosition successCallback)
+                      function getLocation(position) { 
+                        var latitude = position.coords.latitude;
+                        var longitude = position.coords.longitude;
+                        var accuracy = position.coords.accuracy;
+                        var timestamp = position.timestamp;
+                          var newDate = new Date();
+                        newDate.setTime(timestamp*1000);
+                        var dateString = newDate.toUTCString();
+                          document.getElementById("location").innerHTML = "Your location has been recorded at ("+latitude+", "+longitude+").<br>Help is on it's way! Don't lose hope.";
+                        document.getElementById("details").innerHTML = "Distress signal recorded on "+dateString+".";
+                      }
+                        //this is what happens if getCurrentPosition is unsuccessful (getCurrentPosition errorCallback)
+                      function locationFail() {
+                        alert("Location not found. Please check your settings and try again.");
+                    }
+                    });
+                  </script>
+              
+            </div>
+
+            <div class="tab-pane fade" id="rLocator">
+              <p>Locator for Relief Goods</p>
+            </div>
+      </div>
+</div>
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+  <div id="btnNav" class="container">
+      <ul class="nav nav-pills">
+        <li class="active"><a class="navbar-btn btn btn-default"  href="#notify" data-toggle="tab">News</a></li>
+        <li class=""><a class="navbar-btn btn btn-default" href="#sHelp" data-toggle="tab">Seek Help</a></li>
+        <li class=""><a class="navbar-btn btn btn-default" href="#rLocator" data-toggle="tab">Relief Locator</a></li>
+      </ul>
+  </div>
+</div>
+
+
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
