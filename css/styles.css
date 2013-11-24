@@ -1,0 +1,128 @@
+body{
+	background-image:url(../images/bgCpattern.jpg);
+}
+h2{
+	background: #f3ece0;
+	margin: 0 auto;
+	padding: 10px;
+	color: #000;
+	font-size: 25px;
+}
+.navbar-default{
+	background-color: #f3ece0 !important;
+}
+
+#bgContent{
+	width: 100%;
+
+padding-top: 10px;
+ padding-bottom: 60px;
+ margin:0 auto;
+}
+
+#newsContent{
+	margin:0 auto;
+}
+
+img{
+	width: 73px;
+}
+
+
+#twitter-widget-0{
+width: 100%;
+}
+
+.tab-content{
+	margin:0 auto;
+}
+
+.container{
+ padding:1px 7px;
+}
+
+.nav-pills{
+	text-align: center;
+	padding-left: 20px;
+}
+
+.nav-pills>li{
+	margin: auto 5px;
+}
+
+/*.nav-pills>li.active .btn-warning, .nav-pills>li .btn-warning:hover, .nav-pills>li.active .btn-warning:focus{
+  color: #ffffff !important;
+  background-color: #ed9c28 !important;
+  border-color: #d58512  !important;
+    background-image: none  !important;
+}
+
+.nav-pills>li.active .btn-danger, .nav-pills>li .btn-danger:hover, .nav-pills>li.active .btn-danger:focus{
+  color: #ffffff !important;
+  background-color: #d2322d !important;
+  border-color: #ac2925 !important;
+    background-image: none  !important;
+}
+
+.nav-pills>li.active .btn-success, .nav-pills>li .btn-success:hover, .nav-pills>li.active .btn-success:focus{
+  color: #ffffff !important;
+  background-color: #47a447 !important;
+  border-color: #398439 !important;
+    background-image: none  !important;
+}*/
+
+.tab-content{
+	margin: auto 10px;
+}
+
+#mapContainer {
+    height: 500px;
+    width: 800px;
+    border:10px solid #eaeaea;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+img{
+	width: 20% !important;
+	margin: 0 auto;
+	float: left;
+}
+
+#btnNav a{
+  padding: 5px 8px;
+  font-size: 17px;
+  margin: 2px auto;
+}
+
+.navbar{
+	min-height: 40px;
+}
+
+#bgContent{
+ padding-bottom: 45px
+}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 765px) {
+	img{
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+}
+
+@media only screen and (min-width: 766px) and (max-width: 965px) {
+	img{
+	width: 25%;
+	margin: 0 auto;
+	display: block;
+}
+
+#twitter-widget-0{
+width: 100%;
+}
+
+}
